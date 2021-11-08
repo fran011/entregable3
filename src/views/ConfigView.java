@@ -17,9 +17,9 @@ public class ConfigView extends JFrame{
 		this.setLocation(1200, 200);
 		this.setSize(350,230);
 		this.setLayout(null);
+
 		MouseAdapter Back = new Back();
-		
-		
+
 		JPanel mainPanel = new JPanel();
 		mainPanel.setLayout(null);
 		setContentPane(mainPanel);
