@@ -7,17 +7,17 @@ import javax.swing.*;
 
 public class ConfigView extends JFrame{
 	private JTextField user, password;
-	private JButton volverBtn;
+	private JButton volverBtn, guardarBtn;
 	
 	public ConfigView() {
 		super("Gestion de Olimpiadas - CONFIGURACION");
-		// this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		this.setVisible(true);
 		this.setResizable(false);
 		this.setLocation(1200, 200);
 		this.setSize(350,230);
 		this.setLayout(null);
-		MouseAdapter Evento = new Evento();
+		MouseAdapter Back = new Back();
 		
 		
 		JPanel mainPanel = new JPanel();
@@ -39,17 +39,29 @@ public class ConfigView extends JFrame{
 		mainPanel.add(password);
 		
 		volverBtn = new JButton("Volver");
-		volverBtn.setBounds(150, 130, 70, 25);
-		volverBtn.addMouseListener(Evento);
+		volverBtn.setBounds(80, 130, 80, 25);
+		volverBtn.addMouseListener(Back);
 		mainPanel.add(volverBtn);
+		
+		guardarBtn = new JButton("Guardar");
+		guardarBtn.setBounds(180, 130, 80, 25);
+		//guardarBtn.addMouseListener(doConnection);
+		mainPanel.add(guardarBtn);
+		
 		
 		
 		
 	}
 	
-	public class Evento extends MouseAdapter{
+	public class Back extends MouseAdapter{
 		public void mouseClicked(MouseEvent arg) {
 			setVisible(false);
+		}
+	}
+	
+	public class doConnection extends MouseAdapter{
+		public void mouseClicked(MouseEvent arg) {
+			//
 		}
 	}
 	

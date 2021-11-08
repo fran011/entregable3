@@ -25,7 +25,7 @@ public class GestorOlimpiadasView extends JFrame {
 		JButton x2 = new JButton("Sin definir");JButton x3 = new JButton("Sin definir");
 		JButton x4 = new JButton("Sin definir");JButton  x5 = new JButton("Sin definir");
 		JButton x6 = new JButton("Sin definir");
-		JButton log = new JButton("conf");
+		JButton log = new JButton("Conf");
 		
 		//button config
 		MouseAdapter list = new Evento();
@@ -35,7 +35,7 @@ public class GestorOlimpiadasView extends JFrame {
 		disciplina.addMouseListener(list);
 		pais.setBounds(390, 40, 110, 60);
 		pais.addMouseListener(list);
-		log.setBounds(510, 10, 50, 30);
+		log.setBounds(510, 10, 70, 30);
 		log.addMouseListener(list);
 		x1.setBounds(70, 150, 110 , 60);
 		x2.setBounds(230, 150, 110, 60 );
@@ -70,7 +70,7 @@ public class GestorOlimpiadasView extends JFrame {
 		public void mouseClicked(MouseEvent arg) {
 			JButton button = (JButton) arg.getSource();
 			if(button.getText().equals("Deportista")) {
-				//Invoco el panel de Deportista
+				new DeportistaView();
 				System.out.println("Entre");
 			} else if(button.getText().equals("Disciplina")) {
 				//Invoco el panel de Disciplina
@@ -78,7 +78,7 @@ public class GestorOlimpiadasView extends JFrame {
 			} else if(button.getText().equals("Pais")) {
 				//Invoco el panel de Pais
 				System.out.println("Entre 3");
-			} else if(button.getText().equals("conf")) {
+			} else if(button.getText().equals("Conf")) {
 				new ConfigView();
 			}
 			
