@@ -18,6 +18,7 @@ public class ConfigView extends JFrame{
 		this.setSize(350,230);
 		this.setLayout(null);
 		MouseAdapter Evento = new Evento();
+		// Test
 		
 		
 		JPanel mainPanel = new JPanel();
