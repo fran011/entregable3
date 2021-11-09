@@ -76,7 +76,7 @@ public class GestorOlimpiadasView extends JFrame {
 				//Invoco el panel de Disciplina
 				System.out.println("Entre 2");
 			} else if(button.getText().equals("Pais")) {
-				//Invoco el panel de Pais
+				new PaisView();
 				System.out.println("Entre 3");
 			} else if(button.getText().equals("Conf")) {
 				new ConfigView();
