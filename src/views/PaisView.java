@@ -25,8 +25,8 @@ public class PaisView extends JFrame {
 	  public PaisView(){
 		  
 		//config 
+		super("Gestor de olimpiadas - PAIS");
 		setLayout(new BorderLayout());
-	    setTitle("Deportista");
 	    this.setLocation(200,350);
 	    setSize(870,300);
 	    setVisible(true);
@@ -62,9 +62,11 @@ public class PaisView extends JFrame {
 	    
 	    //Eventos
 	    MouseAdapter gonewpais = new goNewPais();
+	    MouseAdapter evento = new Back();
 	    
 	   //Panel botones 
 	    volver = new JButton("Volver");
+	    volver.addMouseListener(evento);
 	    nuevo = new JButton("Nuevo");
 	    nuevo.addMouseListener(gonewpais);
 	    southPanel.add(volver);
@@ -117,6 +119,11 @@ public class PaisView extends JFrame {
 	  public class goNewPais extends MouseAdapter{
 			public void mouseClicked(MouseEvent arg) {
 				NewPaisView agg = new NewPaisView();
+			}
+		}
+	  public class Back extends MouseAdapter{
+			public void mouseClicked(MouseEvent arg) {
+				setVisible(false);
 			}
 		}
 		

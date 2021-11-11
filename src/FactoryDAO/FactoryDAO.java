@@ -9,4 +9,13 @@ public class FactoryDAO {
 		return new DAODeportistaImpl();
 	}
 	
+	public DAODBConnectionImpl getConnection() {
+		return null;
+	}
+	
+	public DAOPaisImpl getPais() {
+		return new DAOPaisImpl();
+	}
+	
+	
 }

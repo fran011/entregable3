@@ -1,14 +1,17 @@
 package views;
 
+import java.awt.TextField;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
+import DAOImplements.DAODBConnectionImpl;
+
 public class ConfigView extends JFrame{
-	private JTextField user, password;
+	private JTextField user, password, error;
 	private JButton volverBtn, guardarBtn;
-	private JTextField error;
+
 	public ConfigView() {
 		super("Gestion de Olimpiadas - CONFIGURACION");
 		this.setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -71,9 +74,12 @@ public class ConfigView extends JFrame{
 		public void mouseClicked(MouseEvent arg) {
 			String str1 = user.getText();
 			String str2 = password.getText();
-			JButton btn = (JButton) arg.getSource();
 			if( (str1 == null || str1.equals("")) || (str2 == null || str2.equals("")) ) {
-				error.setVisible(true);
+				error.setVisible(true);		
+			} else {
+				JOptionPane.showMessageDialog(null, "Conexion realizada");
+				DAODBConnectionImpl.setUser(str1);
+				DAODBConnectionImpl.setPassword(str2);
 			}
 			
 			
